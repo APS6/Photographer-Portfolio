@@ -16,9 +16,8 @@ img {
     max-width: 100%;
 }
 
-
 a {
-    color: white;
+    color: black;
     text-decoration: none;
 }
 
@@ -36,14 +35,15 @@ body {
     justify-content: space-around;
     z-index: 1000;
     height: 8vh;
-    color: white;
     mix-blend-mode: difference;
 }
-
+nav{
+    z-index: 1002;
+    transition: all .5s;
+}
 .navlist {
     display: flex;
     gap: 2rem;
-    background-color: rgb(0, 0, 10);
 }
 
 .brand {
@@ -52,9 +52,32 @@ body {
     letter-spacing: 2px;
 }
 
+.brand a {
+    color: white;
+
+}
+
 .navlist li {
     list-style: none;
     font-size: 1.5ch;
+}
+
+.navlist li a {
+    color: white;
+
+}
+
+.burger {
+    display: none;
+    z-index: 1002;
+}
+
+.line {
+    width: 25px;
+    height: 3px;
+    background-color: white;
+    margin: 5px;
+    transition: all .5s;
 }
 
 header {
@@ -132,7 +155,7 @@ header {
     display: flex;
     align-items: center;
     gap: 4vmin;
-    transform: translate( 70%, 0%);
+    transform: translate(70%, 0%);
 }
 
 .img-slider img {
@@ -142,13 +165,344 @@ header {
     object-position: 100% center;
 }
 
+
+.about {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    gap: 4rem;
+}
+
+.about img {
+    width: 40vmin;
+    height: 56vmin;
+    transform: translateY(50%);
+}
+
+.about-ct {
+    width: 50%;
+}
+
+.about-p {
+    font-size: 2.5ch;
+    margin-bottom: 3rem;
+}
+
+.about-p span {
+    font-weight: bold;
+    font-size: 1.7ch;
+}
+
+.about-p2 {
+    margin-bottom: 2rem;
+}
+
+.btn {
+    font-weight: 600;
+    position: relative;
+    cursor: pointer;
+    overflow: hidden;
+}
+
+.btn::after {
+    content: '';
+    position: absolute;
+    width: 99%;
+    bottom: -3px;
+    left: 0;
+    right: 0;
+    height: 2px;
+    background-color: black;
+    transform-origin: center;
+    transition: transform .6s ease;
+}
+
+.btn:hover::after {
+    transform: scaleX(.5);
+}
+
+
+.contact {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 4rem;
+}
+
+h2 {
+    width: 70%;
+    font-size: 3.5ch;
+    font-family: 'Playfair Display', serif;
+}
+
+form {
+    width: 70%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 4rem;
+}
+
+.row {
+    display: flex;
+    gap: 3rem;
+    width: 100%;
+}
+
+.box {
+    display: flex;
+    flex-direction: column-reverse;
+    gap: .5rem;
+    width: 100%;
+}
+
+input {
+    background-color: var(--bg);
+    border: none;
+    border-bottom: 1px solid black;
+    height: 2rem;
+    width: 100%;
+    font-size: 1.5ch;
+}
+
+textarea {
+    background-color: var(--bg);
+    border: none;
+    border-bottom: 1px solid black;
+    height: 2rem;
+    width: 100%;
+    font-size: 2ch;
+}
+
+.btn-2 {
+    align-self: start;
+    width: 15%;
+    height: 3rem;
+    font-size: 1.5ch;
+    background-color: transparent;
+    border: 2px solid black;
+}
+
+footer {
+    background-color: #fcbc98;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding: 2rem 0;
+}
+
+footer span {
+    font-size: 2.5ch;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.icons {
+    font-size: 2.5ch;
+    display: flex;
+    gap: 30px;
+}
+
+.icons i:hover {
+    color: #3d3d3f;
+}
+
+.intro {
+    background: #f5bc9b;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1001;
+}
+
+.intro-text {
+    color: rgb(233, 233, 233);
+    font-family: 'Playfair Display', serif;
+    letter-spacing: .3rem;
+    font-size: 8rem;
+    display: flex;
+    gap: 1.5rem;
+}
+
+.hide {
+    background: #fcbc98;
+    overflow: hidden;
+}
+
+.hide span {
+    transform: translateY(100%);
+    display: inline-block;
+}
+
+.intro img {
+    width: 15vmin;
+    height: 20vmin;
+    object-fit: cover;
+    position: absolute;
+    transform: translateY(300%);
+    opacity: 0;
+}
+
+.img-1 {
+    top: 5%;
+    left: 5%;
+}
+
+.img-2 {
+    top: 50%;
+    left: 18%;
+}
+
+.img-3 {
+    top: 8%;
+    left: 34%;
+}
+
+.img-4 {
+    bottom: 10%;
+    right: 27%;
+}
+
+.img-5 {
+    top: 40%;
+    right: 18%;
+}
+
+.img-6 {
+    top: 11%;
+    right: 4%;
+}
+
 @media (pointer: coarse) {
+
+    .right {
+        background-image: none;
+    }
+
     .img-slider {
         overflow-x: scroll;
         transform: translate(0%, 0%);
-        margin: 0 2rem; 
+        padding: 0 1rem;
     }
-    .img-slider img{
+
+    .img-slider img {
         object-position: center center;
+    }
+
+    .images {
+        height: 80vh;
+    }
+
+    .about img{
+        transform: translateY(0);
+    }
+}
+
+@media (max-width:700px) {
+    .intro-text{
+        font-size: 4.7ch;
+    }
+
+    .burger {
+        display: block;
+    }
+    
+    nav {
+        position: absolute;
+        right: 0;
+        top: 0vh;
+        height: 100vh;
+        width: 50vw;
+        transform: translateX(100%);
+    }
+    .e{
+        position: fixed;
+        right: 0;
+        top: 0vh;
+        height: 100vh;
+        background-color: #f5bc9b;
+        width: 50vw;
+        transform: translateX(100%);
+        z-index: 999;
+    }
+
+    .navlist {
+        flex-direction: column;
+        height: 100%;
+        justify-content: center;
+        gap: 5rem;
+        align-items: center;
+    }
+
+    .burger.active .line:nth-child(2) {
+        transform: translateX(-100%);
+        opacity: 0;
+    }
+
+    .burger.active .line:nth-child(1) {
+        transform: translateY(8px) rotate(46deg);
+    }
+
+    .burger.active .line:nth-child(3) {
+        transform: translateY(-8px) rotate(-46deg);
+    }
+
+    nav.active {
+        transform: translateX(0);
+    }
+    .e.active{
+        transform: translateX(0);
+    }
+
+    .text{
+        width: 90vw;
+        font-size: 4ch;
+        margin: 0 10vw;
+    }
+
+    .about{
+        flex-direction: column-reverse;
+    }
+    .about-ct{
+        width: 90%;
+    }
+
+    .btn-2{
+        width: 25%;
+    }
+
+    footer{
+        flex-direction: column;
+        gap: 1rem;
+        padding: 1rem 0;
+    }
+    footer span{
+        font-size: 1.5ch;
+    }
+    .icons{
+        font-size: 1.5ch;
+    }
+
+    .img-2, .img-5, .img-3{
+        display: none;
+    }
+    .img-1{
+        left: 7%;
+        top: 6%;
+    }
+    .img-4{
+        bottom: 20%;
+        right: 40%;
+    }
+    .img-6{
+        top: 20%;
+        right: 14%;
     }
 }
