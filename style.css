@@ -167,35 +167,41 @@ header {
 
 
 .about {
+    padding: 15vh 0;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 4rem;
+}
+
+.wrapper{
     display: flex;
     align-items: center;
     justify-content: center;
-    min-height: 100vh;
     gap: 4rem;
 }
 
 .about img {
     width: 40vmin;
     height: 56vmin;
-    transform: translateY(50%);
 }
+.abimg{
+    transform: translateY(50%);
 
+}
 .about-ct {
     width: 50%;
 }
 
 .about-p {
     font-size: 2.5ch;
-    margin-bottom: 3rem;
+    width: 90%;
 }
 
 .about-p span {
     font-weight: bold;
     font-size: 1.7ch;
-}
-
-.about-p2 {
-    margin-bottom: 2rem;
 }
 
 .btn {
@@ -380,6 +386,56 @@ footer span {
     right: 4%;
 }
 
+.gallery{
+    min-height: 100vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 5rem 0;
+    gap: 3rem;
+}
+
+.g1{
+    display: flex;
+    justify-content: space-between;
+    width: 90%;
+
+}
+.g1 img{
+    width: 32%;
+    height: 40vmin;
+    object-fit: cover;
+    transition: transform 1s ease-in-out;
+}
+
+.g2{
+    display: flex;
+    width: 90%;
+    justify-content: space-between;
+}
+.g2 img{
+    width: 48%;
+    height: 50vmin;
+    object-fit: cover;
+    transition: transform 1s ease-in-out;
+}
+.g3{
+    display: flex;
+    justify-content: center;
+    width: 90%;
+}
+.g3 img{
+    height: 50vh;
+    object-fit: cover;
+    width: 100%;
+    transition: transform 1s ease-in-out;
+}
+.g1 img:hover, .g2 img:hover, .g3 img:hover{
+    transform: scale(.95);
+}
+
+
 @media (pointer: coarse) {
 
     .right {
@@ -403,6 +459,7 @@ footer span {
     .about img{
         transform: translateY(0);
     }
+    
 }
 
 @media (max-width:700px) {
@@ -467,8 +524,11 @@ footer span {
         margin: 0 10vw;
     }
 
-    .about{
+    .wrapper{
         flex-direction: column-reverse;
+    }
+    .wrap{
+        flex-direction: column;
     }
     .about-ct{
         width: 90%;
@@ -505,4 +565,26 @@ footer span {
         top: 20%;
         right: 14%;
     }
+    .g1{
+        flex-direction: column;
+        align-items: center;
+        gap: 3rem;
+    }
+    .g1 img {
+        width: 100%;
+    }
+    .g2{
+        flex-direction: column;
+        align-items: center;
+        gap: 3rem;
+    }
+    .g2 img {
+        width: 100%;
+    }
+}
+
+.about-ct{
+    display: flex;
+    gap: 2rem;
+    flex-direction: column;
 }
