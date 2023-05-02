@@ -49,3 +49,20 @@ al.fromTo('.f3', .5, { opacity: 0, y: 40 }, { opacity: 1, y: 0 });
 gsap.fromTo('.g1', 1, { opacity: 0, y: 40 }, { opacity: 1, y: 0, scrollTrigger: '.g1' })
 gsap.fromTo('.g2', 1, { opacity: 0, y: 40 }, { opacity: 1, y: 0, scrollTrigger: '.g2' })
 gsap.fromTo('.g3', 1, { opacity: 0, y: 40 }, { opacity: 1, y: 0, scrollTrigger: '.g3' })
+
+
+const wl = gsap.timeline();
+wl.to(".work-h > span", { y: "0", duration: 1, stagger: .5 });
+wl.fromTo('.work-p', { opacity: 0, y: 40 }, { y: 0, opacity: 1, duration: 1,})
+wl.fromTo('.sd', { opacity: 0, y: 40 }, { y: 0, opacity: 1, duration: .5,})
+
+
+gsap.registerPlugin(ScrollTrigger);
+gsap.utils.toArray('.gallery-img').forEach((panel, i) => {
+  ScrollTrigger.create({
+    trigger: panel,
+    start: "top top",
+    pin: true,
+    pinSpacing: false
+  });
+});

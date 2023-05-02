@@ -387,54 +387,51 @@ footer span {
 }
 
 .gallery{
-    min-height: 100vh;
-    width: 100%;
+    min-height: 600vh;
+
+}
+.gallery-img{
+    width: 100vw;
+    height: 100vh;
+    object-fit: cover;
+}
+.work{
+    height: 100vh;
+    width: 100vw;
     display: flex;
     flex-direction: column;
-    align-items: center;
-    padding: 5rem 0;
-    gap: 3rem;
-}
-
-.g1{
-    display: flex;
-    justify-content: space-between;
-    width: 90%;
-
-}
-.g1 img{
-    width: 32%;
-    height: 40vmin;
-    object-fit: cover;
-    transition: transform 1s ease-in-out;
-}
-
-.g2{
-    display: flex;
-    width: 90%;
-    justify-content: space-between;
-}
-.g2 img{
-    width: 48%;
-    height: 50vmin;
-    object-fit: cover;
-    transition: transform 1s ease-in-out;
-}
-.g3{
-    display: flex;
     justify-content: center;
+    align-items: center;
+    position: relative;
+}
+.work-h{
     width: 90%;
+    text-align: left;
+    font-size: 10ch;
+    font-family: 'Playfair Display', serif;
+    overflow: hidden;
 }
-.g3 img{
-    height: 50vh;
-    object-fit: cover;
-    width: 100%;
-    transition: transform 1s ease-in-out;
+.work-h1 span{
+    transform: translateY(100%);
+    display: inline-block;
 }
-.g1 img:hover, .g2 img:hover, .g3 img:hover{
-    transform: scale(.95);
+.work-h2 > span{
+    transform: translateY(-100%);
+    display: inline-block;
+}
+.work-p{
+    width: 90%;
+    text-align: left;
+    font-size: 2ch;
+    line-height: 2ch;
 }
 
+.sd{
+    position: absolute;
+    bottom: 10%;
+    z-index: 5;
+    left: 5%;
+}
 
 @media (pointer: coarse) {
 
@@ -565,22 +562,13 @@ footer span {
         top: 20%;
         right: 14%;
     }
-    .g1{
-        flex-direction: column;
-        align-items: center;
-        gap: 3rem;
+    .work-h{
+        font-size: 8ch;
     }
-    .g1 img {
-        width: 100%;
+    .work-p{
+        font-size: 1.2ch;
     }
-    .g2{
-        flex-direction: column;
-        align-items: center;
-        gap: 3rem;
-    }
-    .g2 img {
-        width: 100%;
-    }
+    
 }
 
 .about-ct{
