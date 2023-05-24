@@ -167,8 +167,7 @@ header {
 
 
 .about {
-    padding: 15vh 0;
-    min-height: 100vh;
+    /* padding-block: 4rem; */
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -187,7 +186,7 @@ header {
     height: 56vmin;
 }
 .abimg{
-    transform: translateY(50%);
+    transform: translateY(70%);
 
 }
 .about-ct {
@@ -290,6 +289,7 @@ textarea {
     font-size: 1.5ch;
     background-color: transparent;
     border: 2px solid black;
+    border-radius: 5px;
 }
 
 footer {
@@ -433,6 +433,9 @@ footer span {
     left: 5%;
 }
 
+.ab-2{
+    padding: 15vh 0;
+}
 @media (pointer: coarse) {
 
     .right {
@@ -450,9 +453,13 @@ footer span {
     }
 
     .images {
-        height: 80vh;
+        height: 50vh;
+        margin-block: 5rem;
     }
-
+    .img-slider img{
+        width: 55vmin;
+        height: 70vmin;
+    }
     .about img{
         transform: translateY(0);
     }
@@ -530,7 +537,13 @@ footer span {
     .about-ct{
         width: 90%;
     }
-
+    .about-p{
+        width: 100%;
+        font-size: 2.2ch;
+    }
+    .f1{
+        width: 90%;
+    }
     .btn-2{
         width: 25%;
     }
@@ -568,7 +581,9 @@ footer span {
     .work-p{
         font-size: 1.2ch;
     }
-    
+    form {
+        width: 90%;
+    }
 }
 
 .about-ct{
