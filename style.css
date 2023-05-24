@@ -453,7 +453,7 @@ footer span {
     }
 
     .images {
-        height: 50vh;
+        height: auto;
         margin-block: 5rem;
     }
     .img-slider img{
