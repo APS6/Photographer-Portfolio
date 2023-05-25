@@ -164,8 +164,18 @@ header {
     object-fit: cover;
     object-position: 100% center;
 }
-
-
+.see{
+    height: 56vmin;
+    border: 2px solid black;
+    display: block;
+    display: grid;
+    place-items: center;
+}
+.see h3{
+    width: 40vmin;
+    text-align: center;
+    font-size: 2rem;
+}
 .about {
     /* padding-block: 4rem; */
     display: flex;
@@ -459,6 +469,12 @@ footer span {
     .img-slider img{
         width: 55vmin;
         height: 70vmin;
+    }
+    .see {
+        height: 70vmin;
+    }
+    .see h3{
+        width: 55vmin;
     }
     .about img{
         transform: translateY(0);
