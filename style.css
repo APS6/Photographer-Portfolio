@@ -144,7 +144,7 @@ header {
 }
 
 .images {
-    height: 100vh;
+    height: 120vh;
     width: 100vw;
     overflow: hidden;
     display: grid;
@@ -159,13 +159,13 @@ header {
 }
 
 .img-slider img {
-    width: 40vmin;
-    height: 56vmin;
+    width: 60vmin;
+    height: 70vmin;
     object-fit: cover;
     object-position: 100% center;
 }
 .see{
-    height: 56vmin;
+    height: 70vmin;
     border: 2px solid black;
     display: block;
     display: grid;
@@ -467,7 +467,7 @@ footer span {
         margin-block: 5rem;
     }
     .img-slider img{
-        width: 55vmin;
+        width: 60vmin;
         height: 70vmin;
     }
     .see {

@@ -14,7 +14,7 @@ if (matchMedia('(any-pointer:coarse), (any-hover:none)').matches) {
   gsap.fromTo('.about img', 1, { opacity: 0, y: 40 }, { opacity: 1, y: 0, scrollTrigger: '.about img' })
 } else {
   // Code for devices with mouse or trackpad input
-  gsap.to('.img-slider', { scrollTrigger: { trigger: ".images", scrub: 3, start: 'bottom bottom', pin: true }, xPercent: -150 });
+  gsap.to('.img-slider', { scrollTrigger: { trigger: ".images", scrub: 3, start: 'bottom bottom', pin: true }, xPercent: -280 });
   gsap.to('.img-slider img', { scrollTrigger: { trigger: ".images", scrub: 3, start: 'bottom bottom' }, objectPosition: 0 });
 
   const left = document.querySelector(".left");
